@@ -17,5 +17,25 @@ sendBtnEl.addEventListener('click', function () {
 })
 
 function isPalindrome () {
-    return false;
+    
+    // 3. prendo la parola dall'input value 
+    const userWord = wordInputEl.value;
+
+    // 4. creo variabile che conterrà la patrola al contrario  
+    let oppositeWord = '';
+
+    // 5. creo ciclo che conta da lunghezza parola -1 a 0 
+    for (i=userWord.length - 1; i >= 0; i--) {
+
+        // 6. prendo la lettera che corrisponde all'indice e la concateno alla parola al contrario  
+        let letter = userWord[i];
+        oppositeWord += letter;
+
+    }
+
+    // 7. se la parlo e la parola al contrario sono uguali la parola è palindroma => restituisci vero
+    // 8. altrimenti restituisci falso
+    let result = (oppositeWord === userWord) ? true : false;
+    return result;
+    
 }
