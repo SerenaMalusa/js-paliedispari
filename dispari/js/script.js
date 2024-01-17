@@ -1,6 +1,7 @@
 // 1. prendo gli elementi dal dom
 const selectEl = document.getElementById('select');
 const numInputEl = document.getElementById('num-input');
+const errorMsgEl = document.querySelector('.invalid-feedback');
 const sendBtn = document.getElementById('send-button');
 const resultOputputEl = document.getElementById('result-output');
 
@@ -12,6 +13,16 @@ sendBtn.addEventListener('click', function() {
 
     // 4. prendo il numero dell'utente
     const userNum = parseInt(numInputEl.value.trim());
+
+    // se l'utente ha inserito un dato non valido
+    if (!userNum || isNaN(userNum) || userNum > 5 || userNum <= 0) {
+
+        // segnala l'errore
+        numInputEl.classList.add('is-invalid');
+        errorMsgEl.innerText = `Per favore inserisci una numero da 1 a 5.`;
+        // blocca tutto
+        return ;
+    }
 
     // 5. sommo numero utente e numero random
     const sum = userNum + pcNum;
@@ -53,6 +64,10 @@ sendBtn.addEventListener('click', function() {
             </div>
             <h2 class="mt-5">${result}</h2>`;
 
+    // resetta i campi dell errore
+    errorMsgEl.innerText = ``;
+    numInputEl.classList.remove('is-invalid');
+
 })
 
 function getRandomNum (max, min = 0) {
@@ -67,6 +82,7 @@ function getRandomNum (max, min = 0) {
 function isEven (number) {
 
     // b. se il numero è divisibile x 2 restituisce 'pari'
+    // c. altrimenti restituisce 'dispari'
     let result = (number % 2 == 0) ? 'pari' : 'dispari';
     return result;
      
