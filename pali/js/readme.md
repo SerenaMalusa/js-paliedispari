@@ -15,10 +15,10 @@ Creare una funzione per capire se la parola inserita è palindroma
 
 
 **funzione "è palindroma"**  
-3. prendo la parola dall'input value   
-4. creo variabile che conterrà la patrola al contrario  
-5. creo ciclo che conta da lunghezza parola -1 a 0  
-6. prendo la lettera che corrisponde all'indice e la concateno alla parola al contrario  
-7. se la parlo e la parola al contrario sono uguali la parola è palindroma => restituisci vero
-8. altrimenti restituisci falso
+a. prendo la parola dall'input value   
+b. creo variabile che conterrà la patrola al contrario  
+c. creo ciclo che conta da lunghezza parola -1 a 0  
+d. prendo la lettera che corrisponde all'indice e la concateno alla parola al contrario  
+e. se la parlo e la parola al contrario sono uguali la parola è palindroma => restituisci vero
+f. altrimenti restituisci falso
 
