@@ -5,5 +5,17 @@ const resultOutputEl = document.getElementById('result-output');
 
 // 2. al click del bottone
 sendBtnEl.addEventListener('click', function () {
-    console.log('click');
+    
+    // 3. invoco la funzione "è palindroma" e 
+    // 4. se è vero stampa il messaggio "la parola che hai inserito è palindroma"
+    // 5. se è falso stampa il messaggio "la parola che hai inserito non è palindroma"
+    let result = isPalindrome() ? 'La parola è palindroma' : 'La parola non è palindroma';  
+    
+    // stampa in pagina
+    resultOutputEl.innerText = result;
+
 })
+
+function isPalindrome () {
+    return false;
+}
