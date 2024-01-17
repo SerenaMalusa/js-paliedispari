@@ -22,6 +22,7 @@ sendBtn.addEventListener('click', function() {
         errorMsgEl.innerText = `Per favore inserisci una numero da 1 a 5.`;
         // blocca tutto
         return ;
+        
     }
 
     // 5. sommo numero utente e numero random

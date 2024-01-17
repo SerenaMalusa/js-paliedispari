@@ -19,11 +19,15 @@ sendBtnEl.addEventListener('click', function () {
     if ( !userWord ) {
         wordInputEl.classList.add('is-invalid');
         errorMsgEl.innerText = `Per favore inserisci una parola.`
-        result = '';
+        return;
     }
     
     // stampa in pagina
     resultOutputEl.innerText = result;
+
+    // resetta i campi dell errore
+    errorMsgEl.innerText = ``;
+    wordInputEl.classList.remove('is-invalid');
 
 })
 
