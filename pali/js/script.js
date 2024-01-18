@@ -33,6 +33,9 @@ sendBtnEl.addEventListener('click', function () {
 
 function isPalindrome (word) {
 
+    // tolgo possibili lettere maiuscole
+    word = word.toLowerCase();
+
     // b. creo variabile che conterrà la patrola al contrario  
     let oppositeWord = '';
 
@@ -40,7 +43,7 @@ function isPalindrome (word) {
     for (let i=word.length - 1; i >= 0; i--) {
 
         // d. prendo la lettera che corrisponde all'indice e la concateno alla parola al contrario  
-        let letter = word[i];
+        const letter = word[i];
         oppositeWord += letter;
 
     }
