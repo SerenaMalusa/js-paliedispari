@@ -10,17 +10,17 @@ sendBtnEl.addEventListener('click', function () {
     // a. prendo la parola dall'input value 
     let userWord = wordInputEl.value.trim();
 
-    // 3. invoco la funzione "è palindroma" e 
-    // 4. se è vero stampa il messaggio "la parola che hai inserito è palindroma"
-    // 5. se è falso stampa il messaggio "la parola che hai inserito non è palindroma"
-    let result = isPalindrome(userWord) ? `La parola '${userWord}' è palindroma` : `La parola '${userWord}' non è palindroma`;  
-    
     // se l'utente inserisce una stringa vuota
     if ( !userWord ) {
         wordInputEl.classList.add('is-invalid');
         errorMsgEl.innerText = `Per favore inserisci una parola.`
         return;
     }
+
+    // 3. invoco la funzione "è palindroma" e 
+    // 4. se è vero stampa il messaggio "la parola che hai inserito è palindroma"
+    // 5. se è falso stampa il messaggio "la parola che hai inserito non è palindroma"
+    let result = isPalindrome(userWord) ? `La parola '${userWord}' è palindroma` : `La parola '${userWord}' non è palindroma`;  
     
     // stampa in pagina
     resultOutputEl.innerText = result;
@@ -37,7 +37,7 @@ function isPalindrome (word) {
     let oppositeWord = '';
 
     // c. creo ciclo che conta da lunghezza parola -1 a 0 
-    for (i=word.length - 1; i >= 0; i--) {
+    for (let i=word.length - 1; i >= 0; i--) {
 
         // d. prendo la lettera che corrisponde all'indice e la concateno alla parola al contrario  
         let letter = word[i];
